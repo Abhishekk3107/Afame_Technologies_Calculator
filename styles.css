@@ -1,0 +1,150 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.toggle-mode {
+  background-color: #ff9500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.calculator {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  padding: 20px;
+  width: 300px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calculator-display {
+  background-color: #000;
+  color: #fff;
+  text-align: right;
+  padding: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.calculator-display input {
+  border: none;
+  background: none;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: 70%;
+}
+
+.btn {
+  background-color: #333;
+  border: none;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.btn-gray {
+  background-color: #a5a5a5;
+}
+
+.btn-orange {
+  background-color: #ff9500;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+.dark-mode .calculator {
+  background-color: #000;
+}
+
+.dark-mode .calculator-display {
+  background-color: #000;
+  color: #fff;
+}
+
+.light-mode .calculator {
+  background-color: #fff;
+}
+
+.light-mode .calculator-display {
+  background-color: #fff;
+  color: #000;
+}
+
+.light-mode .calculator-display input {
+  border: none;
+  background: none;
+  color: black;
+  width: 100%;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.light-mode .btn {
+  background-color: #e0f7fa;
+  color: #000;
+}
+
+.light-mode .btn-gray {
+  background-color: #b2ebf2;
+}
+
+.light-mode .btn-orange {
+  background-color: #80deea;
+}
+
+@media (max-width: 600px) {
+  .btn {
+      padding: 15px;
+      font-size: 1.2em;
+  }
+
+  .calculator-display {
+      padding: 15px;
+      font-size: 1.5em;
+  }
+}
